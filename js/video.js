@@ -22,17 +22,19 @@ document.querySelector("#volumeSlider").addEventListener("change", function(){
 	console.log(this.value);
 	let vol = document.querySelector("#volume").innerHTML = this.value + '%'
 	video.volume = this.value / 100;
+	console.log(video.volume);
 
 });
 document.querySelector("#mute").addEventListener("click", function(){
+	let vol = document.querySelector('#mute').innerHTML;
 	if (video.muted){
 		video.muted = false;
-		document.querySelector('#mute').innerHTML = "Mute"
+		vol = "Mute"
 		
 	}
 	else {
 		video.muted = true;
-		document.querySelector('#mute').innerHTML = "UnMute"
+		vol = "UnMute"
 		
 	}
 	
