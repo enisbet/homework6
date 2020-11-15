@@ -20,6 +20,7 @@ document.querySelector("#pause").addEventListener("click", function() {
 document.querySelector("#volumeSlider").addEventListener("change", function(){
 	console.log(this);
 	console.log(this.value);
+	document.querySelector('#volumeSlider').step = '1';
 	let vol = document.querySelector("#volume").innerHTML = this.value + '%'
 	video.volume = this.value / 100;
 
