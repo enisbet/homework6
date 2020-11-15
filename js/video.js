@@ -20,7 +20,6 @@ document.querySelector("#pause").addEventListener("click", function() {
 document.querySelector("#volumeSlider").addEventListener("change", function(){
 	console.log(this);
 	console.log(this.value);
-	document.querySelector('#volumeSlider').step = '1';
 	let vol = document.querySelector("#volume").innerHTML = this.value + '%'
 	video.volume = this.value / 100;
 
@@ -28,12 +27,12 @@ document.querySelector("#volumeSlider").addEventListener("change", function(){
 document.querySelector("#mute").addEventListener("click", function(){
 	if (video.muted){
 		video.muted = false;
-		let text = document.getElementById('#mute').innerHTML = "Mute"
+		document.querySelector('#mute').innerHTML = "Mute"
 		
 	}
 	else {
 		video.muted = true;
-		let text = document.getElementById('#mute').innerHTML = "UnMute"
+		document.querySelector('#mute').innerHTML = "UnMute"
 		
 	}
 	
