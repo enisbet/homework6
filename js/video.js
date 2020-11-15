@@ -26,15 +26,15 @@ document.querySelector("#volumeSlider").addEventListener("change", function(){
 
 });
 document.querySelector("#mute").addEventListener("click", function(){
-	let vol = document.querySelector('#mute').innerHTML;
+	let vol = document.querySelector('#mute');
 	if (video.muted){
 		video.muted = false;
-		vol = "Mute"
+		vol.innerHTML = "Mute"
 		
 	}
 	else {
 		video.muted = true;
-		vol = "UnMute"
+		vol.innerHTML = "UnMute"
 		
 	}
 	
