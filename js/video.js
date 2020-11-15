@@ -25,10 +25,11 @@ document.querySelector("#volumeSlider").addEventListener("change", function(){
 
 });
 document.querySelector("#mute").addEventListener("click", function(){
+	var prev = video.volume;
 	if (video.muted){
 		video.muted = false;
-		let volSlider = document.querySelector("#volumeSlider").value = 100;
-		let vol = document.querySelector("#volume").innerHTML = 100 + '%';
+		let volSlider = document.querySelector("#volumeSlider").value = prev * 100;
+		let vol = document.querySelector("#volume").innerHTML = prev * 100 + '%';
 	}
 	else {
 		video.muted = true;
